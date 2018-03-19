@@ -62,7 +62,7 @@ namespace MovieCRUD
         {
             if (count == 0) { }
             else
-            {
+            { 
                 count--;
             }
             FillTextBox();
@@ -73,6 +73,7 @@ namespace MovieCRUD
             txtID.Text = ds.Tables[0].Rows[count]["videocode"].ToString();
             txtTitle.Text = ds.Tables[0].Rows[count]["movietitle"].ToString();
             txtPrice.Text = ds.Tables[0].Rows[count]["rentalprice"].ToString();
+            lblStatus.Text = "Row No : " + (count + 1);
         }
 
         private void btnFirst_Click(object sender, EventArgs e)
@@ -85,8 +86,9 @@ namespace MovieCRUD
             ds.Tables[0].Rows[count]["videocode"] = txtID.Text;
             ds.Tables[0].Rows[count]["movietitle"] = txtTitle.Text;
             ds.Tables[0].Rows[count]["rentalprice"] = txtPrice.Text;
-            cmb.GetUpdateCommand();
+            //cmb.GetUpdateCommand();
             da.Update(ds, "Movies");
+            lblStatus.Text = "Updated";
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -98,6 +100,8 @@ namespace MovieCRUD
             ds.Tables[0].Rows.Add(r);
             da.Update(ds, "Movies");
             lastrow++;
+            lblStatus.Text = "Inserted";
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -106,22 +110,28 @@ namespace MovieCRUD
             r.Delete();
             da.Update(ds, "Movies");
             lastrow--;
+            lblStatus.Text = "Deleted";
+
         }
 
         private void btnFind_Click(object sender, EventArgs e)
         {
             DataTable table = ds.Tables["Movies"];
-            table.PrimaryKey = new DataColumn[] { table.Columns["VideoCode"] };
+            table.PrimaryKey = new DataColumn[] { table.Columns["movietitle"] };
             DataRow r = table.Rows.Find(txtFind.Text);
             if (r == null)
             {
-                Console.WriteLine("Error!");
+                lblStatus.Text = "Cannot find the keyword";
+                txtID.Text = "";
+                txtPrice.Text = "";
+                txtTitle.Text = "";
             }
             else
             {
                 txtID.Text = r[0].ToString();
                 txtTitle.Text = r[1].ToString();
                 txtPrice.Text = r[2].ToString();
+                lblStatus.Text = "1 Search Result";
             }
 
         }
