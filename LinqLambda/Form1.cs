@@ -23,13 +23,47 @@ namespace LinqLambda
         private void button1_Click(object sender, EventArgs e)
         {
             context = new DafestyEntities();
-            //Question2();
-            //Question3();
-            //Question4();
-            //Question5();
-           // Question6();
-          //Question7();
-            Question8();
+            
+
+            switch(comboBox1.SelectedItem)
+            {
+                case "Question 2":
+                    Question2();
+                    break;
+                case "Question 3":
+                    Question3();
+                    break;
+                case "Question 4":
+                    Question4();
+                    break;
+                case "Question 5":
+                    Question5();
+                    break;
+                case "Question 6":
+                    Question6();
+                    break;
+                case "Question 7":
+                    Question7();
+                    break;
+                case "Question 8":
+                    Question8();
+                    break;
+                case "Question 9":
+                    Question8();
+                    break;
+                case "Question 10":
+                    Question8();
+                    break;
+                case "Question 11":
+                    Question8();
+                    break;
+                case "Question 12":
+                    Question8();
+                    break;
+                case "Question 13":
+                    Question8();
+                    break;
+            }
         }
 
         private void Question2()
@@ -78,8 +112,6 @@ namespace LinqLambda
             var q = (from x in context.Movies where x.MovieType == "Action" select x).Count();
             label1.Text = q.ToString();
             //lambda
-
-            
             label2.Text = context.Movies.Where(x => x.MovieType == "Action").Count().ToString();
         }
 
@@ -87,14 +119,13 @@ namespace LinqLambda
         {
             //linq
             m = (from x in context.Movies where x.MovieType == "Action" select x).ToList();
-
-            double total = 0;
-            foreach(var q in m)
+            int total = 0;
+            foreach (var q in m)
             {
-                total += (double)q.TotalStock;
+                total += (int)q.TotalStock;
             }
             label1.Text = total.ToString();
-           // q.Sum(x.totalstock);
+            // q.Sum(x.totalstock);
 
             //lambda
             label2.Text = context.Movies.Where(x => x.MovieType == "Action").Sum(x => x.TotalStock).ToString();
@@ -105,16 +136,13 @@ namespace LinqLambda
         {
             //linq
             m = (from x in context.Movies where x.MovieType == "Comedy" select x).ToList();
-
             double total = 0;
             int count = 0;
-
-            foreach(var q in m)
+            foreach (var q in m)
             {
                 total += (double)q.RentalPrice;
                 count++;
             }
-
             label1.Text = (total / count).ToString();
 
 
@@ -124,5 +152,14 @@ namespace LinqLambda
 
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
