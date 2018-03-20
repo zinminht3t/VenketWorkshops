@@ -28,7 +28,7 @@ namespace LinqLambda
             //Question4();
             //Question5();
            // Question6();
-          // Question7();
+          //Question7();
             Question8();
         }
 
@@ -78,13 +78,22 @@ namespace LinqLambda
             var q = (from x in context.Movies where x.MovieType == "Action" select x).Count();
             label1.Text = q.ToString();
             //lambda
+
+            
             label2.Text = context.Movies.Where(x => x.MovieType == "Action").Count().ToString();
         }
 
         private void Question7()
         {
             //linq
-            var q = (from x in context.Movies where x.MovieType == "Action" select x.TotalStock).ToList();
+            m = (from x in context.Movies where x.MovieType == "Action" select x).ToList();
+
+            double total = 0;
+            foreach(var q in m)
+            {
+                total += (double)q.TotalStock;
+            }
+            label1.Text = total.ToString();
            // q.Sum(x.totalstock);
 
             //lambda
@@ -95,7 +104,18 @@ namespace LinqLambda
         private void Question8()
         {
             //linq
-           // var q = (from x in context.Movies where x.MovieType == "Comedy" select x).ToList().Average();
+            m = (from x in context.Movies where x.MovieType == "Comedy" select x).ToList();
+
+            double total = 0;
+            int count = 0;
+
+            foreach(var q in m)
+            {
+                total += (double)q.RentalPrice;
+                count++;
+            }
+
+            label1.Text = (total / count).ToString();
 
 
             //lambda
