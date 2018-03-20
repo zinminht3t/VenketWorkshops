@@ -103,6 +103,7 @@
             this.btnLoad.TabIndex = 6;
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // btnInsert
             // 
@@ -112,6 +113,7 @@
             this.btnInsert.TabIndex = 7;
             this.btnInsert.Text = "Insert";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnUpdate
             // 
@@ -121,6 +123,7 @@
             this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -130,6 +133,7 @@
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnPrevious
             // 
@@ -139,6 +143,7 @@
             this.btnPrevious.TabIndex = 10;
             this.btnPrevious.Text = "<";
             this.btnPrevious.UseVisualStyleBackColor = true;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
             // btnNext
             // 
@@ -148,6 +153,7 @@
             this.btnNext.TabIndex = 11;
             this.btnNext.Text = ">";
             this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // btnFirst
             // 
@@ -157,6 +163,7 @@
             this.btnFirst.TabIndex = 12;
             this.btnFirst.Text = "<<";
             this.btnFirst.UseVisualStyleBackColor = true;
+            this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
             // 
             // btnLast
             // 
@@ -166,6 +173,7 @@
             this.btnLast.TabIndex = 13;
             this.btnLast.Text = ">>";
             this.btnLast.UseVisualStyleBackColor = true;
+            this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
             // 
             // txtFindID
             // 
@@ -185,9 +193,9 @@
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(377, 739);
+            this.btnFind.Location = new System.Drawing.Point(336, 727);
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(114, 47);
+            this.btnFind.Size = new System.Drawing.Size(279, 47);
             this.btnFind.TabIndex = 16;
             this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = true;

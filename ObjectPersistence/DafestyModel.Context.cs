@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MovieCRUDwithEntity
+namespace ObjectPersistence
 {
     using System;
     using System.Data.Entity;
@@ -25,7 +25,7 @@ namespace MovieCRUDwithEntity
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Movie> Movies1 { get; set; }
+        public virtual DbSet<Movie> Movies { get; set; }
         public virtual DbSet<Producer> Producers { get; set; }
     }
 }

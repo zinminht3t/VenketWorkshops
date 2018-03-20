@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{23303D0A-14AF-4ABE-9B29-79D570D6A9EE}</ProjectGuid>
+    <ProjectGuid>{B6834E8C-2B0A-4C3B-87C5-E0419E4C34CB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>MovieCRUDwithEntity</RootNamespace>
-    <AssemblyName>MovieCRUDwithEntity</AssemblyName>
+    <RootNamespace>ObjectPersistence</RootNamespace>
+    <AssemblyName>ObjectPersistence</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

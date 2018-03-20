@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MovieCRUDwithEntity
+namespace ObjectPersistence
 {
     using System;
     using System.Collections.Generic;
@@ -16,9 +16,9 @@ namespace MovieCRUDwithEntity
     {
         public short VideoCode { get; set; }
         public string MovieTitle { get; set; }
-        public string MovieType { get; set; }
+        public string Genre { get; set; }
         public string Rating { get; set; }
-        public Nullable<float> RentalPrice { get; set; }
+        public Nullable<float> RentalCost { get; set; }
         public string ProducerID { get; set; }
         public string Director { get; set; }
         public string Media { get; set; }
