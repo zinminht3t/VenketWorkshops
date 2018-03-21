@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aa19712976974a2eb213665c0a14fa9e" Name="Diagram1">
+        <EntityTypeShape EntityType="DafestyModel.Country" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DafestyModel.CustomerContact" Width="1.5" PointX="5.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DafestyModel.Customer" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DafestyModel.Documentary" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DafestyModel.Employee" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DafestyModel.EmployeesBackup" Width="1.5" PointX="7.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DafestyModel.IssueTran" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DafestyModel.MemberCategory" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DafestyModel.Movy" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DafestyModel.Producer" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DafestyModel.ProducerWebSite" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DafestyModel.SalaryHistory" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DafestyModel.StockAdjustment" Width="1.5" PointX="5.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DafestyModel.sysdiagram" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DafestyModel.table1" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DafestyModel.UserMaster" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DafestyModel.ControlTable" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="DafestyModel.FK_Customers_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="DafestyModel.FK_CustomerContact_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="DafestyModel.FK_IssueTran_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="DafestyModel.FK_IssueTran_Movies1" ManuallyRouted="false" />
+        <AssociationConnector Association="DafestyModel.FK_Movies_Producers" ManuallyRouted="false" />
+        <AssociationConnector Association="DafestyModel.FK_StockAdjustment_Movies" ManuallyRouted="false" />
+        <AssociationConnector Association="DafestyModel.FK_ProducerWebSite_Producers" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
